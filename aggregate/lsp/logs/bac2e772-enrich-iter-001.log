@@ -1,0 +1,27 @@
+[2026-04-09T21:48:16Z] === ENRICH ITERATION 1 START | repo=kulshekhar/ts-jest sha=bac2e772 ===
+[2026-04-09T21:48:16Z] [iter=1] PHASE START: enrich repo=kulshekhar/ts-jest sha=bac2e772 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/bac2e772-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/bac2e77231418c35cb9b9946d7d871c0ee2322a1.nq.gz
+[2026-04-09T21:48:57Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=83 MB
+[2026-04-09T21:49:00Z] [iter=1] AST store loaded triples=345783 load_secs=2 mem_mb=581 MB
+[2026-04-09T21:49:00Z] [iter=1] Step 2: Finding LSP targets mem_mb=581 MB
+[2026-04-09T21:49:00Z] [iter=1] LSP targets found call_sites=3014 imports=394 extends=7 implements=2 secs=0
+[2026-04-09T21:49:00Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=581 MB
+[2026-04-09T21:49:02Z] [iter=1] Position index built positions=23180 nodes_with_types=27232 secs=2 mem_mb=581 MB
+[2026-04-09T21:49:02Z] [iter=1] Step 3: Starting LSP resolution mem_mb=581 MB already_completed_types=[] already_completed_files=0
+[2026-04-09T21:49:02Z] [iter=1] Resolving target type target_type=call_site count=3014
+[2026-04-09T21:49:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.8 files_done=0 resolved=0 errors=0 current=src/legacy/ts-jest-transformer.spec.ts
+[2026-04-09T21:49:34Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.3 files_done=3 resolved=6 errors=233 current=src/utils/memoize.spec.ts
+[2026-04-09T21:50:13Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.9 files_done=10 resolved=19 errors=529 current=src/utils/importer.ts
+[2026-04-09T21:50:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.5 files_done=17 resolved=29 errors=782 current=src/cli/helpers/presets.ts
+[2026-04-09T21:51:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.0 files_done=32 resolved=44 errors=1001 current=src/utils/logger.ts
+[2026-04-09T21:51:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.5 files_done=77 resolved=64 errors=1205 current=examples/js-with-babel/jest-esm.config.ts
+[2026-04-09T21:52:05Z] [iter=1] Target type resolved target_type=call_site resolved=71 errors=1295 secs=183 mem_mb=581 MB
+[2026-04-09T21:52:05Z] [iter=1] Resolving target type target_type=import_statement count=394
+[2026-04-09T21:52:21Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=4.1 files_done=140 resolved=159 errors=0 current=e2e/transform-js/jest-transpiler-esm.config.ts
+[2026-04-09T21:52:24Z] [iter=1] Target type resolved target_type=import_statement resolved=160 errors=0 secs=19 mem_mb=581 MB
+[2026-04-09T21:52:24Z] [iter=1] Resolving target type target_type=extends_clause count=7
+[2026-04-09T21:52:26Z] [iter=1] Target type resolved target_type=extends_clause resolved=7 errors=0 secs=2 mem_mb=581 MB
+[2026-04-09T21:52:26Z] [iter=1] Resolving target type target_type=implements_clause count=2
+[2026-04-09T21:52:27Z] [iter=1] Target type resolved target_type=implements_clause resolved=2 errors=0 secs=2 mem_mb=581 MB
+[2026-04-09T21:52:33Z] [iter=1] Step 5: Writing final enrichment file triples=26057
+[2026-04-09T21:52:34Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/bac2e77231418c35cb9b9946d7d871c0ee2322a1.nq.gz size_kb=525
+[2026-04-09T21:52:34Z] [iter=1] PHASE END: enrich elapsed_s=258 elapsed_min=4.3 total_triples=26057
